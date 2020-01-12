@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentController">
+   <children>
+      <Label fx:id="labsd" layoutX="298.0" layoutY="10.0" text="Student details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablos" layoutX="37.0" layoutY="10.0" text="List of students">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labphoto" layoutX="495.0" layoutY="11.0" prefHeight="20.0" prefWidth="37.0" text="Photo" />
+      <Label fx:id="labname" layoutX="292.0" layoutY="35.0" text="Name" />
+      <TextField fx:id="Name" layoutX="288.0" layoutY="53.0" />
+      <TextField fx:id="Mark" layoutX="288.0" layoutY="215.0" />
+      <TextField fx:id="Comments" layoutX="285.0" layoutY="271.0" prefHeight="74.0" prefWidth="295.0" />
+      <Label fx:id="labdob" layoutX="288.0" layoutY="140.0" text="Date of birth" />
+      <Label fx:id="labgender" layoutX="289.0" layoutY="86.0" text="Gender" />
+      <DatePicker fx:id="Date" layoutX="289.0" layoutY="157.0" />
+      <Label fx:id="labmark" layoutX="286.0" layoutY="192.0" text="Mark" />
+      <Label fx:id="labcomments" layoutX="285.0" layoutY="248.0" text="Comments" />
+      <ImageView fx:id="Photo" fitHeight="150.0" fitWidth="119.0" layoutX="463.0" layoutY="65.0" onMouseClicked="#chooseImage" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="Gender" layoutX="287.0" layoutY="103.0" prefWidth="150.0">  <items>      <FXCollections fx:factory="observableArrayList"> <String fx:value="Male" /> <String fx:value="female" />      </FXCollections>  </items> </ComboBox>
+      <ListView fx:id="LStudent" layoutX="14.0" layoutY="35.0" prefHeight="316.0" prefWidth="248.0" />
+      <Button fx:id="btnEdit" disable="true" layoutX="282.0" layoutY="361.0" mnemonicParsing="false" onAction="#onEdit" text="Edit" />
+      <Button fx:id="btnSave" disable="true" layoutX="454.0" layoutY="361.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+      <Button fx:id="btnCancel" disable="true" layoutX="506.0" layoutY="361.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <Label fx:id="lbPath" layoutX="518.0" layoutY="219.0" text="Label" />
+      <Button layoutX="37.0" layoutY="361.0" mnemonicParsing="false" onAction="#onNew" text="Add Student" />
+      <Button fx:id="btnDelete" disable="true" layoutX="336.0" layoutY="361.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+
+   </children>
+</AnchorPane>
